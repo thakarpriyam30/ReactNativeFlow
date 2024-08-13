@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import {View, Text} from 'react-native';
 import styles from './index.style';
 import Button from '../../Comman/Button';
+import { useNavigation } from '@react-navigation/native';
+import ISCREENS from '../../Navigation/IScreen';
 const MainPage = () => {
-  const [modal, setModal] = useState(false);
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -13,8 +15,7 @@ const MainPage = () => {
       </View>
       <Button
         label={'Click Me'}
-        onPress={() => setModal(!modal)}
-        
+        onPress={() => navigation.navigate(ISCREENS.LogIn)}
       />
     </View>
   );

@@ -25,6 +25,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import MainPage from './src/Pages/Main';
+import Navigation from './src/Navigation';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -69,7 +70,7 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <MainPage/>
+      <Navigation/>
     </SafeAreaView>
   );
 }
